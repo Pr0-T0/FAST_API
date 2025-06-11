@@ -21,6 +21,11 @@ Install dependencies:
 ```bash
 pip install fastapi uvicorn
 ```
+Run Your app:
+```bash
+    uvicorn file_name:app --reload
+```
+
 ## API Docs
 Once running, check the docs:
 
