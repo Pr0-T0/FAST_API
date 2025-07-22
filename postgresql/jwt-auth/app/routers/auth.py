@@ -9,3 +9,4 @@ def login(loginDetails: UserInLogin):
 @authrouter.post("/signup")
 def signup(signUpDetails: UserInCreate):
     return {"data":signUpDetails}
+
