@@ -4,7 +4,7 @@ from app.db.schema.user import UserInCreate
 
 class UserRepository(BaseRepository):
     def create_user(self, user_data: UserInCreate):
-        newUser = User(user_data.model_dump(exclude_none=True))
+        newUser = User(**user_data.model_dump(exclude_none=True))
 
         self.session.add(instance=newUser)
         self.session.commit()
