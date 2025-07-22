@@ -28,3 +28,9 @@ class UserService:
                 return UserWithToken(token=token)
             raise HTTPException(status_code=500, detail="Unable to process request")
         raise HTTPException(status_code=400, detail="Please Check your credentials")
+    
+    def get_user_by_id(self, user_id : int):
+        user = self.__userRepository.get_user_by_id(user_id = user_id)
+        if user:
+            return user
+        raise HTTPException(status_code=400, detail="User is not available")
